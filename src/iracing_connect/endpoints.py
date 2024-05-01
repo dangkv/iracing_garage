@@ -2,10 +2,10 @@ URL = "https://members-ng.iracing.com"
 URL_LOGIN = URL + "/auth"
 
 # results
-URL_RACE_DATA = URL + "/data/results/get"  # ingest
-URL_EVENT_LOG = URL + "/data/results/event_log"
-URL_LAP_DATA = URL + "/data/results/lap_data"
-URL_LAP_CHART_DATA = URL + "/data/results/lap_chart_data"
+URL_RESULTS_SUMMARY = URL + "/data/results/get"  # ingest
+URL_RESULTS_EVENT_LOG = URL + "/data/results/event_log"
+URL_RESULTS_LAP_DATA = URL + "/data/results/lap_data"
+URL_RESULTS_LAP_CHART_DATA = URL + "/data/results/lap_chart_data"
 
 # stats
 URL_STATS_MEMBER_BESTS = URL + "/data/stats/member_bests"  # ingest
@@ -16,4 +16,4 @@ URL_STATS_MEMBER_RECENT_RACES = URL + "/data/stats/member_recent_races"  # inges
 
 
 # league
-URL_MEMBERSHIP = URL + "/data/league/membership"
+URL_LEAGURE_MEMBERSHIP = URL + "/data/league/membership"

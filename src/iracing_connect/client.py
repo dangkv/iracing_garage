@@ -2,8 +2,34 @@ import inspect
 import logging
 import json
 import requests
-import endpoints
-import helpers
+import iracing_connect.endpoints
+import iracing_connect.helpers
+import iracing_connect.transport
+
+
+class iRacingConnectClient:
+    def __init__(self, transport, logger):
+        self.logger = logger
+        self.transport = transport
+
+    def _get(self, url: str, api_group: str, func_name: str, params=None) -> dict:
+        response = self.transport.get(url=url, params=params)
+
+        if response.status_code == requests.codes.OK:
+            gateway_response_dict = json.loads(response.text)
+            api_link = gateway_response_dict.get("link")
+
+            # TODO: raise if fails
+            response_data = self.transport.get(url=api_link)
+            return response_data.json()
+
+        else:
+            self.logger.debug(
+                f"Error retrieving {api_group} - {func_name}: {self.transport.dump_response(response)}"
+            )
+            raise Exception(
+                f"Error retrieving {api_group} - {func_name}: {response.text}"
+            )
 
 
 class Client:
@@ -98,46 +124,6 @@ class Client:
         }
         return record
 
-    def event_log(self, subsession_id: int):
-        endpoint = endpoints.URL_EVENT_LOG
-        func_name = inspect.stack()[0][3]
-        full_session = []
-
-        # The main event is 0; the preceding event is -1, and so on
-        for simsession_number in [0, -1, -2]:
-
-            params = {
-                "subsession_id": subsession_id,
-                "simsession_number": simsession_number,
-            }
-
-            results_response = self._get(endpoint, params)
-            record = self._wrap_payload(results_response, "event_log", endpoint, params)
-
-            full_session.append(record)
-
-        return full_session
-
-    def lap_chart_data(self, subsession_id: int):
-        endpoint = endpoints.URL_LAP_CHART_DATA
-        func_name = inspect.stack()[0][3]
-        full_session = []
-
-        # The main event is 0; the preceding event is -1, and so on
-        for simsession_number in [0, -1, -2]:
-
-            params = {
-                "subsession_id": subsession_id,
-                "simsession_number": simsession_number,
-            }
-
-            results_response = self._get(endpoint, params)
-            record = self._wrap_payload(results_response, func_name, endpoint, params)
-
-            full_session.append(record)
-
-        return full_session
-
     def member_bests(self, customer_id, car_id):
         params = {"cust_id": customer_id, "car_id": car_id}
         endpoint = endpoints.URL_STATS_MEMBER_BESTS
@@ -186,15 +172,6 @@ class Client:
     def membership(self, customer_id: int):
         params = {"customer_id": customer_id}
         endpoint = endpoints.URL_MEMBERSHIP
-        func_name = inspect.stack()[0][3]
-
-        results_response = self._get(endpoint, params)
-        record = self._wrap_payload(results_response, func_name, endpoint, params)
-        return record
-
-    def race_data(self, subsession_id: int):
-        params = {"subsession_id": subsession_id}
-        endpoint = endpoints.URL_RACE_DATA
         func_name = inspect.stack()[0][3]
 
         results_response = self._get(endpoint, params)
