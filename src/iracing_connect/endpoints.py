@@ -16,4 +16,23 @@ URL_STATS_MEMBER_RECENT_RACES = URL + "/data/stats/member_recent_races"  # inges
 
 
 # league
-URL_LEAGURE_MEMBERSHIP = URL + "/data/league/membership"
+URL_LEAGUE_CUST_LEAGUE_SESSIONS = URL + "/data/league/cust_league_sessions"
+URL_LEAGUE_DIRECTORY = URL + "/data/league/directory"
+URL_LEAGUE_GET = URL + "/data/league/get"
+URL_LEAGUE_GET_POINTS_SYSTEMS = URL + "/data/league/get_points_systems"
+URL_LEAGUE_MEMBERSHIP = URL + "/data/league/membership"
+URL_LEAGUE_ROSTER = URL + "/data/league/roster"
+URL_LEAGUE_SEASONS = URL + "/data/league/seasons"
+URL_LEAGUE_SEASON_STANDINGS = URL + "/data/league/season_standings"
+URL_LEAGUE_SEASON_SESSIONS = URL + "/data/league/season_sessions"
+
+
+# team
+URL_TEAM_GET = URL + "/data/team/get"
+
+# time attack
+URL_MEMBER_SEASON_RESULTS = URL + "/data/time_attack/member_season_results"
+
+# track
+URL_TRACK_GET = URL + "/data/track/get"
+URL_TRACK_ASSETS = URL + "/data/track/assets"
