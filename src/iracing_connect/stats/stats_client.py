@@ -23,27 +23,29 @@ class StatsClient(iRacingConnectClient):
         endpoint = endpoints.URL_STATS_MEMBER_CAREER
         func_name = inspect.stack()[0][3]
 
-        params = {"customer_id": customer_id}
+        params = {"cust_id": customer_id}
 
         return self._get(
             url=endpoint, api_group=self.api_group, func_name=func_name, params=params
         )
 
-    def member_summary(self, customer_id: int) -> dict:
-        endpoint = endpoints.URL_STATS_MEMBER_SUMMARY
+    def member_division(self, season_id: int, event_type: int) -> dict:
+        endpoint = endpoints.URL_STATS_MEMBER_DIVISION
         func_name = inspect.stack()[0][3]
 
-        params = {"customer_id": customer_id}
+        params = {"season_id": season_id, "event_type": event_type}
 
         return self._get(
             url=endpoint, api_group=self.api_group, func_name=func_name, params=params
         )
 
-    def member_yearly(self, customer_id: int) -> dict:
-        endpoint = endpoints.URL_STATS_MEMBER_YEARLY
+    def member_recap(
+        self, customer_id: int = None, year: int = None, season: int = season
+    ) -> dict:
+        endpoint = endpoints.URL_STATS_MEMBER_RECAP
         func_name = inspect.stack()[0][3]
 
-        params = {"customer_id": customer_id}
+        params = {"cust_id": customer_id, "year": year, "season": season}
 
         return self._get(
             url=endpoint, api_group=self.api_group, func_name=func_name, params=params
@@ -53,7 +55,189 @@ class StatsClient(iRacingConnectClient):
         endpoint = endpoints.URL_STATS_MEMBER_RECENT_RACES
         func_name = inspect.stack()[0][3]
 
-        params = {"customer_id": customer_id}
+        params = {"cust_id": customer_id}
+
+        return self._get(
+            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+        )
+
+    def member_summary(self, customer_id: int) -> dict:
+        endpoint = endpoints.URL_STATS_MEMBER_SUMMARY
+        func_name = inspect.stack()[0][3]
+
+        params = {"cust_id": customer_id}
+
+        return self._get(
+            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+        )
+
+    def member_yearly(self, customer_id: int) -> dict:
+        endpoint = endpoints.URL_STATS_MEMBER_YEARLY
+        func_name = inspect.stack()[0][3]
+
+        params = {"cust_id": customer_id}
+
+        return self._get(
+            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+        )
+
+    def season_driver_standings(
+        self,
+        season_id: int,
+        car_class_id: int,
+        club_id: int = None,
+        divion: int = None,
+        race_week_num: int = None,
+    ) -> dict:
+
+        endpoint = endpoints.URL_STATS_SEASON_DRIVER_STANDINGS
+        func_name = inspect.stack()[0][3]
+
+        params = {
+            "season_id": season_id,
+            "car_class_id": car_class_id,
+            "club_id": club_id,
+            "divion": divion,
+            "race_week_num": race_week_num,
+        }
+
+        return self._get(
+            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+        )
+
+    def season_supersession_standings(
+        self,
+        season_id: int,
+        car_class_id: int,
+        club_id: int = None,
+        divion: int = None,
+        race_week_num: int = None,
+    ) -> dict:
+
+        endpoint = endpoints.URL_STATS_SEASON_SUPERSESSION_STANDINGS
+        func_name = inspect.stack()[0][3]
+
+        params = {
+            "season_id": season_id,
+            "car_class_id": car_class_id,
+            "club_id": club_id,
+            "divion": divion,
+            "race_week_num": race_week_num,
+        }
+
+        return self._get(
+            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+        )
+
+    def season_team_standings(
+        self,
+        season_id: int,
+        car_class_id: int,
+        race_week_num: int = None,
+    ) -> dict:
+
+        endpoint = endpoints.URL_STATS_SEASON_TEAM_STANDINGS
+        func_name = inspect.stack()[0][3]
+
+        params = {
+            "season_id": season_id,
+            "car_class_id": car_class_id,
+            "race_week_num": race_week_num,
+        }
+
+        return self._get(
+            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+        )
+
+    def season_tt_standings(
+        self,
+        season_id: int,
+        car_class_id: int,
+        club_id: int = None,
+        divion: int = None,
+        race_week_num: int = None,
+    ) -> dict:
+
+        endpoint = endpoints.URL_STATS_SEASON_TT_STANDINGS
+        func_name = inspect.stack()[0][3]
+
+        params = {
+            "season_id": season_id,
+            "car_class_id": car_class_id,
+            "club_id": club_id,
+            "divion": divion,
+            "race_week_num": race_week_num,
+        }
+
+        return self._get(
+            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+        )
+
+    def season_tt_results(
+        self,
+        season_id: int,
+        car_class_id: int,
+        race_week_num: int,
+        club_id: int = None,
+        divion: int = None,
+    ) -> dict:
+
+        endpoint = endpoints.URL_STATS_SEASON_TT_RESULTS
+        func_name = inspect.stack()[0][3]
+
+        params = {
+            "season_id": season_id,
+            "car_class_id": car_class_id,
+            "club_id": club_id,
+            "divion": divion,
+            "race_week_num": race_week_num,
+        }
+
+        return self._get(
+            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+        )
+
+    def season_qualify_results(
+        self,
+        season_id: int,
+        car_class_id: int,
+        race_week_num: int,
+        club_id: int = None,
+        divion: int = None,
+    ) -> dict:
+
+        endpoint = endpoints.URL_STATS_SEASON_QUALIFY_RESULTS
+        func_name = inspect.stack()[0][3]
+
+        params = {
+            "season_id": season_id,
+            "car_class_id": car_class_id,
+            "club_id": club_id,
+            "divion": divion,
+            "race_week_num": race_week_num,
+        }
+
+        return self._get(
+            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+        )
+
+    def world_records(
+        self,
+        car_id: int,
+        track_id: int,
+        season_year: int = None,
+        season_quarter: int = None,
+    ) -> dict:
+
+        endpoint = endpoints.URL_STATS_WORLD_RECORDS
+        func_name = inspect.stack()[0][3]
+
+        params = {
+            "car_id": car_id,
+            "track_id": track_id,
+            "season_year": season_year,
+            "season_quarter": season_quarter,
+        }
 
         return self._get(
             url=endpoint, api_group=self.api_group, func_name=func_name, params=params
