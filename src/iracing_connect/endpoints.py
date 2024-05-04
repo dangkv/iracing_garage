@@ -39,7 +39,7 @@ URL_STATS_WORLD_RECORDS = URL + "/stats/world_records"
 URL_TEAM_GET = URL + "/team/get"
 
 # time attack
-URL_MEMBER_SEASON_RESULTS = URL + "/time_attack/member_season_results"
+URL_TIME_ATTACK_MEMBER_SEASON_RESULTS = URL + "/time_attack/member_season_results"
 
 # track
 URL_TRACK_GET = URL + "/track/get"

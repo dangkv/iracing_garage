@@ -40,7 +40,7 @@ class StatsClient(iRacingConnectClient):
         )
 
     def member_recap(
-        self, customer_id: int = None, year: int = None, season: int = season
+        self, customer_id: int = None, year: int = None, season: int = None
     ) -> dict:
         endpoint = endpoints.URL_STATS_MEMBER_RECAP
         func_name = inspect.stack()[0][3]
