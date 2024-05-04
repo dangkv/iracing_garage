@@ -18,7 +18,7 @@ if __name__ == "__main__":
     x_string = "random"
 
     # fmt: off
-    get_result = iRacing.results.summary(subsession_id, 0)
+    # get_result = iRacing.results.summary(subsession_id, 0)
     # get_result = iRacing.results.lap_data(subsession_id, 0)
     # get_result = iRacing.results.event_log(subsession_id, 0)
     # get_result = iRacing.results.lap_chart_data(subsession_id, 0)
@@ -28,7 +28,7 @@ if __name__ == "__main__":
     # get_result = iRacing.stats.member_recent_races(customer_id=customer_id)
     # get_result = iRacing.stats.member_summary(customer_id=customer_id)
 
-    # stats
+    ## stats
     # get_result = iRacing.stats.member_bests(customer_id=customer_id, car_id=car_id)
 
     ## league
@@ -36,16 +36,16 @@ if __name__ == "__main__":
     # get_result = iRacing.league.directory(search=x_string, tag="test")
     # get_result = iRacing.league.get(league_id=x_int, include_licenses=True)
     # get_result = iRacing.league.get_points_systems(league_id=x_int, season_id=x_int)
-    # get_result = iRacing.league.membership(customer_id=customer_id, include_league=False)
+    # get_result = iRacing.league.membership(customer_id=customer_id, include_league=True)
     # get_result = iRacing.league.roster(league_id=x_int, include_licenses=True)
     # get_result = iRacing.league.seasons(league_id=x_int, retired=True)
     # get_result = iRacing.league.season_standings(league_id=x_int, season_id=x_int)
     # get_result = iRacing.league.season_sessions(league_id=x_int, season_id=x_int, results_only=True)
 
-    # time_attack
+    ## time_attack
     # get_result = iRacing.time_attack.member_season_results(ta_comp_season_id=x_int)
 
-    # track
+    ## track
     # get_result = iRacing.track.get()
     # get_result = iRacing.track.assets()
 

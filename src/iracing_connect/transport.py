@@ -37,10 +37,9 @@ class iRacingConnectTransport:
         password = helpers.encode_pw(self.username, self.password)
         data = {"email": self.username, "password": password}
         headers = {"Content-Type": "application/json"}
-        json_data = json.dumps(data)
 
         login_response = requests.post(
-            endpoints.URL_LOGIN, data=json_data, headers=headers
+            endpoints.URL_LOGIN, data=json.dumps(data), headers=headers
         )
         return login_response.cookies
 
