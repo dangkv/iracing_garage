@@ -1,10 +1,10 @@
 import inspect
 
-import iracing_connect.endpoints as endpoints
-from iracing_connect.client import iRacingConnectClient
+import iracing_garage.endpoints as endpoints
+from iracing_garage.client import iRacingGarageClient
 
 
-class TrackClient(iRacingConnectClient):
+class TrackClient(iRacingGarageClient):
     def __init__(self, transport, logger):
         super().__init__(transport, logger)
         self.api_group = "track"

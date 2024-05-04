@@ -2,8 +2,8 @@ import json
 import requests
 from requests_toolbelt.utils import dump
 
-import iracing_connect.endpoints as endpoints
-import iracing_connect.helpers as helpers
+import iracing_garage.endpoints as endpoints
+import iracing_garage.helpers as helpers
 
 
 class HTTPMethod:
@@ -14,7 +14,7 @@ class HTTPMethod:
     DELETE = "DELETE"
 
 
-class iRacingConnectTransport:
+class iRacingGarageTransport:
 
     def __init__(self, username, password, logger):
         self.username = username

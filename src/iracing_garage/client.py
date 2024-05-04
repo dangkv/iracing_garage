@@ -2,12 +2,12 @@ import inspect
 import logging
 import json
 import requests
-import iracing_connect.endpoints
-import iracing_connect.helpers
-import iracing_connect.transport
+import iracing_garage.endpoints
+import iracing_garage.helpers
+import iracing_garage.transport
 
 
-class iRacingConnectClient:
+class iRacingGarageClient:
     def __init__(self, transport, logger):
         self.logger = logger
         self.transport = transport

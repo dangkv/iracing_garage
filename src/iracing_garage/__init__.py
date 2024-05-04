@@ -1,22 +1,22 @@
 import logging
 
-from iracing_connect.transport import iRacingConnectTransport
-from iracing_connect.league.league_client import LeagueClient
-from iracing_connect.results.results_client import ResultsClient
-from iracing_connect.stats.stats_client import StatsClient
-from iracing_connect.time_attack.time_attack_client import TimeAttackClient
-from iracing_connect.track.track_client import TrackClient
+from iracing_garage.transport import iRacingGarageTransport
+from iracing_garage.league.league_client import LeagueClient
+from iracing_garage.results.results_client import ResultsClient
+from iracing_garage.stats.stats_client import StatsClient
+from iracing_garage.time_attack.time_attack_client import TimeAttackClient
+from iracing_garage.track.track_client import TrackClient
 
 
-parent_logger = logging.getLogger("iracing_connect")
+parent_logger = logging.getLogger("iracing_garage")
 parent_logger.setLevel(logging.WARNING)
 
 
-class iRacingConnect:
+class iRacingGarage:
 
     def __init__(self, username, password):
         self.logger = parent_logger
-        self.transport = iRacingConnectTransport(
+        self.transport = iRacingGarageTransport(
             username=username, password=password, logger=self.logger
         )
 

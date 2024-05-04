@@ -1,5 +1,5 @@
 import os
-from iracing_connect import iRacingConnect
+from iracing_garage import iRacingGarage
 from dotenv import load_dotenv
 
 
@@ -9,7 +9,7 @@ if __name__ == "__main__":
     username = os.getenv("USERNAME")
     password = os.getenv("PASSWORD")
 
-    iRacing = iRacingConnect(username, password)
+    iRacing = iRacingGarage(username, password)
 
     subsession_id = 64059658
     customer_id = 937417
@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     # fmt: off
     # get_result = iRacing.results.summary(subsession_id, 0)
-    # get_result = iRacing.results.lap_data(subsession_id, 0)
+    get_result = iRacing.results.lap_data(subsession_id, 0)
     # get_result = iRacing.results.event_log(subsession_id, 0)
     # get_result = iRacing.results.lap_chart_data(subsession_id, 0)
     # get_result = iRacing.stats.member_bests(customer_id=customer_id, car_id=car_id)
