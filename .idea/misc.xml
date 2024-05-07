@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="Black">
+    <option name="sdkUUID" value="3fbe1d6c-795b-46b5-8a45-61b705e26d6a" />
+  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (iracing_garage)" project-jdk-type="Python SDK" />
 </project>
