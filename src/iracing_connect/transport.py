@@ -15,7 +15,6 @@ class HTTPMethod:
 
 
 class iRacingConnectTransport:
-
     def __init__(self, username, password, logger):
         self.username = username
         self.password = password
