@@ -12,7 +12,9 @@ class iRacingConnectClient:
         self.logger = logger
         self.transport = transport
 
-    def _get(self, url: str, api_group: str, func_name: str, params=None) -> dict:
+    def _get(
+        self, url: str, api_group: str, func_name: str, params=None
+    ) -> dict:
         response = self.transport.get(url=url, params=params)
 
         if response.status_code == requests.codes.OK:
@@ -80,8 +82,6 @@ class Client:
 
         payload_dict = json.loads(response_text)
 
-        payload = json.dumps(payload_dict)  # TODO: delete
-
         print()
 
         return payload_dict
@@ -102,9 +102,9 @@ class Client:
                     allow_redirects=False,
                     timeout=10.0,
                 ).text
-            except:
+            except:  # noqa
                 # TODO: build exceptions
-                msg = f"API extraction error at {chunk_file_name}, {i}/{len(chunk_file_names)}"
+                msg = f"API extraction error at {chunk_file_name}, {i}/{len(chunk_file_names)}"  # noqa
                 pass
 
             chunks.append(response)
@@ -130,7 +130,9 @@ class Client:
         func_name = inspect.stack()[0][3]
 
         results_response = self._get(endpoint, params)
-        record = self._wrap_payload(results_response, func_name, endpoint, params)
+        record = self._wrap_payload(
+            results_response, func_name, endpoint, params
+        )
         return record
 
     def member_career(self, customer_id):
@@ -139,7 +141,9 @@ class Client:
         func_name = inspect.stack()[0][3]
 
         results_response = self._get(endpoint, params)
-        record = self._wrap_payload(results_response, func_name, endpoint, params)
+        record = self._wrap_payload(
+            results_response, func_name, endpoint, params
+        )
         return record
 
     def member_recent_races(self, customer_id):
@@ -148,7 +152,9 @@ class Client:
         func_name = inspect.stack()[0][3]
 
         results_response = self._get(endpoint, params)
-        record = self._wrap_payload(results_response, func_name, endpoint, params)
+        record = self._wrap_payload(
+            results_response, func_name, endpoint, params
+        )
         return record
 
     def member_summary(self, customer_id):
@@ -157,7 +163,9 @@ class Client:
         func_name = inspect.stack()[0][3]
 
         results_response = self._get(endpoint, params)
-        record = self._wrap_payload(results_response, func_name, endpoint, params)
+        record = self._wrap_payload(
+            results_response, func_name, endpoint, params
+        )
         return record
 
     def member_yearly(self, customer_id):
@@ -166,7 +174,9 @@ class Client:
         func_name = inspect.stack()[0][3]
 
         results_response = self._get(endpoint, params)
-        record = self._wrap_payload(results_response, func_name, endpoint, params)
+        record = self._wrap_payload(
+            results_response, func_name, endpoint, params
+        )
         return record
 
     def membership(self, customer_id: int):
@@ -175,5 +185,7 @@ class Client:
         func_name = inspect.stack()[0][3]
 
         results_response = self._get(endpoint, params)
-        record = self._wrap_payload(results_response, func_name, endpoint, params)
+        record = self._wrap_payload(
+            results_response, func_name, endpoint, params
+        )
         return record
