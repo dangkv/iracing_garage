@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     # fmt: off
     # get_result = iRacing.results.summary(subsession_id, 0)
-    get_result = iRacing.results.lap_data(subsession_id, 0)
+    # get_result = iRacing.results.lap_data(subsession_id, 0)
     # get_result = iRacing.results.event_log(subsession_id, 0)
     # get_result = iRacing.results.lap_chart_data(subsession_id, 0)
     # get_result = iRacing.stats.member_bests(customer_id=customer_id, car_id=car_id)

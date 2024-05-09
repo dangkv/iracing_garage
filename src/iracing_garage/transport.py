@@ -14,7 +14,7 @@ class HTTPMethod:
     DELETE = "DELETE"
 
 
-class iRacingConnectTransport:
+class iRacingGarageTransport:
     def __init__(self, username, password, logger):
         self.username = username
         self.password = password
