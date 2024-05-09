@@ -16,7 +16,10 @@ class StatsClient(iRacingGarageClient):
         params = {"customer_id": customer_id, "car_id": car_id}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def member_career(self, customer_id: int) -> dict:
@@ -26,7 +29,10 @@ class StatsClient(iRacingGarageClient):
         params = {"cust_id": customer_id}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def member_division(self, season_id: int, event_type: int) -> dict:
@@ -36,7 +42,10 @@ class StatsClient(iRacingGarageClient):
         params = {"season_id": season_id, "event_type": event_type}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def member_recap(
@@ -48,7 +57,10 @@ class StatsClient(iRacingGarageClient):
         params = {"cust_id": customer_id, "year": year, "season": season}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def member_recent_races(self, customer_id: int) -> dict:
@@ -58,7 +70,10 @@ class StatsClient(iRacingGarageClient):
         params = {"cust_id": customer_id}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def member_summary(self, customer_id: int) -> dict:
@@ -68,7 +83,10 @@ class StatsClient(iRacingGarageClient):
         params = {"cust_id": customer_id}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def member_yearly(self, customer_id: int) -> dict:
@@ -78,7 +96,10 @@ class StatsClient(iRacingGarageClient):
         params = {"cust_id": customer_id}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def season_driver_standings(
@@ -102,7 +123,10 @@ class StatsClient(iRacingGarageClient):
         }
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def season_supersession_standings(
@@ -126,7 +150,10 @@ class StatsClient(iRacingGarageClient):
         }
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def season_team_standings(
@@ -146,7 +173,10 @@ class StatsClient(iRacingGarageClient):
         }
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def season_tt_standings(
@@ -170,7 +200,10 @@ class StatsClient(iRacingGarageClient):
         }
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def season_tt_results(
@@ -194,7 +227,10 @@ class StatsClient(iRacingGarageClient):
         }
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def season_qualify_results(
@@ -218,7 +254,10 @@ class StatsClient(iRacingGarageClient):
         }
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def world_records(
@@ -240,5 +279,8 @@ class StatsClient(iRacingGarageClient):
         }
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )

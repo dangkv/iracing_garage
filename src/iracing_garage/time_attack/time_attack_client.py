@@ -16,5 +16,8 @@ class TimeAttackClient(iRacingGarageClient):
         params = {"ta_comp_season_id": ta_comp_season_id}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )

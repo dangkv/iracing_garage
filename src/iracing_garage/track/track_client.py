@@ -13,10 +13,14 @@ class TrackClient(iRacingGarageClient):
         endpoint = endpoints.URL_TRACK_GET
         func_name = inspect.stack()[0][3]
 
-        return self._get(url=endpoint, api_group=self.api_group, func_name=func_name)
+        return self._get(
+            url=endpoint, api_group=self.api_group, func_name=func_name
+        )
 
     def assets(self) -> dict:
         endpoint = endpoints.URL_TRACK_ASSETS
         func_name = inspect.stack()[0][3]
 
-        return self._get(url=endpoint, api_group=self.api_group, func_name=func_name)
+        return self._get(
+            url=endpoint, api_group=self.api_group, func_name=func_name
+        )
