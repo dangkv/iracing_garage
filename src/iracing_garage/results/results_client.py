@@ -19,10 +19,15 @@ class ResultsClient(iRacingGarageClient):
         }
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
-    def lap_chart_data(self, subsession_id: int, simsession_number: int) -> dict:
+    def lap_chart_data(
+        self, subsession_id: int, simsession_number: int
+    ) -> dict:
         endpoint = endpoints.URL_RESULTS_LAP_CHART_DATA
         func_name = inspect.stack()[0][3]
 
@@ -32,7 +37,10 @@ class ResultsClient(iRacingGarageClient):
         }
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def lap_data(self, subsession_id: int, simsession_number: int) -> dict:
@@ -45,7 +53,10 @@ class ResultsClient(iRacingGarageClient):
         }
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def summary(self, subsession_id: int, simsession_number: int) -> dict:
@@ -58,5 +69,8 @@ class ResultsClient(iRacingGarageClient):
         }
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )

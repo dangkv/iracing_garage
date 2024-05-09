@@ -14,8 +14,7 @@ class HTTPMethod:
     DELETE = "DELETE"
 
 
-class iRacingGarageTransport:
-
+class iRacingConnectTransport:
     def __init__(self, username, password, logger):
         self.username = username
         self.password = password
@@ -46,7 +45,9 @@ class iRacingGarageTransport:
     def get(self, url: str, params: dict = None):
         response = self.request(url, HTTPMethod.GET, params)
         self.logger.info(f"Request sent for URL: {response.url}")
-        self.logger.info(f"Status code of the response: {response.status_code}")
+        self.logger.info(
+            f"Status code of the response: {response.status_code}"
+        )
         self.logger.debug(f"Response object: {response.__dict__}")
 
         return response
