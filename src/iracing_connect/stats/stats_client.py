@@ -16,7 +16,10 @@ class StatsClient(iRacingConnectClient):
         params = {"customer_id": customer_id, "car_id": car_id}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def member_career(self, customer_id: int) -> dict:
@@ -26,7 +29,10 @@ class StatsClient(iRacingConnectClient):
         params = {"customer_id": customer_id}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def member_summary(self, customer_id: int) -> dict:
@@ -36,7 +42,10 @@ class StatsClient(iRacingConnectClient):
         params = {"customer_id": customer_id}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def member_yearly(self, customer_id: int) -> dict:
@@ -46,7 +55,10 @@ class StatsClient(iRacingConnectClient):
         params = {"customer_id": customer_id}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )
 
     def member_recent_races(self, customer_id: int) -> dict:
@@ -56,5 +68,8 @@ class StatsClient(iRacingConnectClient):
         params = {"customer_id": customer_id}
 
         return self._get(
-            url=endpoint, api_group=self.api_group, func_name=func_name, params=params
+            url=endpoint,
+            api_group=self.api_group,
+            func_name=func_name,
+            params=params,
         )

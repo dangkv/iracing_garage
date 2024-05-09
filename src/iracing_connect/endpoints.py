@@ -12,7 +12,9 @@ URL_STATS_MEMBER_BESTS = URL + "/data/stats/member_bests"  # ingest
 URL_STATS_MEMBER_CAREER = URL + "/data/stats/member_career"
 URL_STATS_MEMBER_SUMMARY = URL + "/data/stats/member_summary"
 URL_STATS_MEMBER_YEARLY = URL + "/data/stats/member_yearly"
-URL_STATS_MEMBER_RECENT_RACES = URL + "/data/stats/member_recent_races"  # ingest
+URL_STATS_MEMBER_RECENT_RACES = (
+    URL + "/data/stats/member_recent_races"
+)  # ingest
 
 
 # league

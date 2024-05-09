@@ -9,7 +9,6 @@ parent_logger.setLevel(logging.WARNING)
 
 
 class iRacingConnect:
-
     def __init__(self, username, password):
         self.logger = parent_logger
         self.transport = iRacingConnectTransport(
