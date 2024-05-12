@@ -12,6 +12,5 @@ jobs:
         uses: actions/checkout@v3
       - name: black Lint
         uses: psf/black@stable
-        args: ['--config=pyproject.toml', '-v']
       - name: flake8 Lint
         uses: py-actions/flake8@v2
