@@ -18,10 +18,7 @@ if __name__ == "__main__":
     x_string = "random"
 
     # fmt: off
-    # get_result = iRacing.results.summary(subsession_id, 0)
-    # get_result = iRacing.results.lap_data(subsession_id, 0)
-    # get_result = iRacing.results.event_log(subsession_id, 0)
-    # get_result = iRacing.results.lap_chart_data(subsession_id, 0)
+
     # get_result = iRacing.stats.member_bests(customer_id=customer_id, car_id=car_id)
     # get_result = iRacing.stats.member_yearly(customer_id=customer_id)
     # get_result = iRacing.stats.member_career(customer_id=customer_id)
@@ -36,10 +33,10 @@ if __name__ == "__main__":
     # get_result = iRacing.carclass.get()
 
     ## constants
-    get_result = iRacing.constants.event_types()
+    # get_result = iRacing.constants.event_types()
 
-    ## stats
-    # get_result = iRacing.stats.member_bests(customer_id=customer_id, car_id=car_id)
+    ## hosted
+    # get_result = iRacing.hosted.sessions()
 
     ## league
     # get_result = iRacing.league.cust_league_sessions(mine=True, package_id=x_int)
@@ -51,6 +48,30 @@ if __name__ == "__main__":
     # get_result = iRacing.league.seasons(league_id=x_int, retired=True)
     # get_result = iRacing.league.season_standings(league_id=x_int, season_id=x_int)
     # get_result = iRacing.league.season_sessions(league_id=x_int, season_id=x_int, results_only=True)
+
+    ## lookup
+    # get_result = iRacing.lookup.get()
+
+    ## member
+    # get_result = iRacing.member.get(cust_ids=customer_id)
+
+    ## results
+    # get_result = iRacing.results.get(subsession_id, 0)
+    # get_result = iRacing.results.lap_data(subsession_id, 0)
+    # get_result = iRacing.results.event_log(subsession_id, 0)
+    # get_result = iRacing.results.lap_chart_data(subsession_id, 0)
+
+    ## season
+    # get_result = iRacing.season.spectator_subsessionids()
+
+    ## series
+    # get_result = iRacing.series.assets()
+
+    ## stats
+    # get_result = iRacing.stats.member_bests(customer_id=customer_id, car_id=car_id)
+
+    ## team
+    # get_result = iRacing.team.get(team_id=x_int)
 
     ## time_attack
     # get_result = iRacing.time_attack.member_season_results(ta_comp_season_id=x_int)
