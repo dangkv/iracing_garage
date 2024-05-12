@@ -2,6 +2,22 @@
 URL = "https://members-ng.iracing.com"
 URL_LOGIN = URL + "/auth"
 
+# car
+URL_CAR_ASSETS = URL + "/data/car/assets"
+URL_CAR_GET = URL + "/data/car/get"
+
+# carclass
+URL_CARCLASS_GET = URL + "/data/carclass/get"
+
+# constants
+URL_CONSTANTS_CATEGORIES = URL + "/data/constants/categories"
+URL_CONSTANTS_DIVISIONS = URL + "/data/constants/divisions"
+URL_CONSTANTS_EVENT_TYPES = URL + "/data/constants/event_types"
+
+# hosted
+URL_HOSTED_COMBINED_SESSIONS = URL + "/data/hosted/combined_sessions"
+URL_HOSTED_SESSIONS = URL + "/data/hosted/sessions"
+
 # results
 URL_RESULTS_SUMMARY = URL + "/data/results/get"  # ingest
 URL_RESULTS_EVENT_LOG = URL + "/data/results/event_log"

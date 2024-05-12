@@ -7,5 +7,6 @@ exclude = '''
   | \.github
   | \docs
   | \venv
+  | \src\tools
 )/
 '''

@@ -28,6 +28,16 @@ if __name__ == "__main__":
     # get_result = iRacing.stats.member_recent_races(customer_id=customer_id)
     # get_result = iRacing.stats.member_summary(customer_id=customer_id)
 
+    ## car
+    # get_result = iRacing.car.get()
+    # get_result = iRacing.car.assets()
+
+    ## carclass
+    # get_result = iRacing.carclass.get()
+
+    ## constants
+    get_result = iRacing.constants.event_types()
+
     ## stats
     # get_result = iRacing.stats.member_bests(customer_id=customer_id, car_id=car_id)
 

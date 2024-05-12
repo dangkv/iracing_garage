@@ -33,6 +33,12 @@ class iRacingGarageClient:
                 f"Error retrieving {api_group} - {func_name}: {response.text}"
             )
 
+    def _get_chunks(self):
+        ...  # TODO
+
+    def _get_constants(self):
+        ...  # TODO: constants does not have a gateway
+
 
 class Client:
     def __init__(self, username: str, password: str):
