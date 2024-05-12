@@ -19,7 +19,7 @@ jobs:
       - name: black Lint
         uses: psf/black@stable
         with:
-          use_pyproject: true
+          src: "./src/iracing_garage"
 
       - name: flake8 Lint
         uses: py-actions/flake8@v2
