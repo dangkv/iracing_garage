@@ -9,7 +9,7 @@ link: ```https://members-ng.iracing.com/data/car/assets```
 
 ### car.get()
 
-```No Description```
+No Description
 
 
 link: ```https://members-ng.iracing.com/data/car/get```
@@ -20,7 +20,7 @@ link: ```https://members-ng.iracing.com/data/car/get```
 
 ### carclass.get()
 
-```No Description```
+No Description
 
 
 link: ```https://members-ng.iracing.com/data/carclass/get```
@@ -77,7 +77,7 @@ link: ```https://members-ng.iracing.com/data/hosted/sessions```
 
 ### league.cust_league_sessions()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -88,7 +88,7 @@ link: ```https://members-ng.iracing.com/data/league/cust_league_sessions```
 
 ### league.directory()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -109,7 +109,7 @@ link: ```https://members-ng.iracing.com/data/league/directory```
 
 ### league.get()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -120,7 +120,7 @@ link: ```https://members-ng.iracing.com/data/league/get```
 
 ### league.get_points_systems()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -131,7 +131,7 @@ link: ```https://members-ng.iracing.com/data/league/get_points_systems```
 
 ### league.membership()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -142,7 +142,7 @@ link: ```https://members-ng.iracing.com/data/league/membership```
 
 ### league.roster()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -153,7 +153,7 @@ link: ```https://members-ng.iracing.com/data/league/roster```
 
 ### league.seasons()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -164,7 +164,7 @@ link: ```https://members-ng.iracing.com/data/league/seasons```
 
 ### league.season_standings()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -177,7 +177,7 @@ link: ```https://members-ng.iracing.com/data/league/season_standings```
 
 ### league.season_sessions()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -204,14 +204,14 @@ link: ```https://members-ng.iracing.com/data/lookup/club_history```
 
 ### lookup.countries()
 
-```No Description```
+No Description
 
 
 link: ```https://members-ng.iracing.com/data/lookup/countries```
 
 ### lookup.drivers()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -229,7 +229,7 @@ link: ```https://members-ng.iracing.com/data/lookup/get```
 
 ### lookup.licenses()
 
-```No Description```
+No Description
 
 
 link: ```https://members-ng.iracing.com/data/lookup/licenses```
@@ -240,7 +240,7 @@ link: ```https://members-ng.iracing.com/data/lookup/licenses```
 
 ### member.awards()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -250,7 +250,7 @@ link: ```https://members-ng.iracing.com/data/member/awards```
 
 ### member.chart_data()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -262,7 +262,7 @@ link: ```https://members-ng.iracing.com/data/member/chart_data```
 
 ### member.get()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -287,7 +287,7 @@ link: ```https://members-ng.iracing.com/data/member/participation_credits```
 
 ### member.profile()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -312,7 +312,7 @@ link: ```https://members-ng.iracing.com/data/results/get```
 
 ### results.event_log()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -323,7 +323,7 @@ link: ```https://members-ng.iracing.com/data/results/event_log```
 
 ### results.lap_chart_data()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -334,7 +334,7 @@ link: ```https://members-ng.iracing.com/data/results/lap_chart_data```
 
 ### results.lap_data()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -391,7 +391,7 @@ link: ```https://members-ng.iracing.com/data/results/search_series```
 
 ### results.season_results()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -407,7 +407,7 @@ link: ```https://members-ng.iracing.com/data/results/season_results```
 
 ### season.list()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -418,7 +418,7 @@ link: ```https://members-ng.iracing.com/data/season/list```
 
 ### season.race_guide()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -429,7 +429,7 @@ link: ```https://members-ng.iracing.com/data/season/race_guide```
 
 ### season.spectator_subsessionids()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -450,7 +450,7 @@ link: ```https://members-ng.iracing.com/data/series/assets```
 
 ### series.get()
 
-```No Description```
+No Description
 
 
 link: ```https://members-ng.iracing.com/data/series/get```
@@ -467,7 +467,7 @@ link: ```https://members-ng.iracing.com/data/series/past_seasons```
 
 ### series.seasons()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -488,7 +488,7 @@ link: ```https://members-ng.iracing.com/data/series/stats_series```
 
 ### stats.member_bests()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -499,7 +499,7 @@ link: ```https://members-ng.iracing.com/data/stats/member_bests```
 
 ### stats.member_career()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -520,7 +520,7 @@ link: ```https://members-ng.iracing.com/data/stats/member_division```
 
 ### stats.member_recap()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -532,7 +532,7 @@ link: ```https://members-ng.iracing.com/data/stats/member_recap```
 
 ### stats.member_recent_races()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -542,7 +542,7 @@ link: ```https://members-ng.iracing.com/data/stats/member_recent_races```
 
 ### stats.member_summary()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -552,7 +552,7 @@ link: ```https://members-ng.iracing.com/data/stats/member_summary```
 
 ### stats.member_yearly()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -562,7 +562,7 @@ link: ```https://members-ng.iracing.com/data/stats/member_yearly```
 
 ### stats.season_driver_standings()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -576,7 +576,7 @@ link: ```https://members-ng.iracing.com/data/stats/season_driver_standings```
 
 ### stats.season_supersession_standings()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -590,7 +590,7 @@ link: ```https://members-ng.iracing.com/data/stats/season_supersession_standings
 
 ### stats.season_team_standings()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -602,7 +602,7 @@ link: ```https://members-ng.iracing.com/data/stats/season_team_standings```
 
 ### stats.season_tt_standings()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -616,7 +616,7 @@ link: ```https://members-ng.iracing.com/data/stats/season_tt_standings```
 
 ### stats.season_tt_results()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -630,7 +630,7 @@ link: ```https://members-ng.iracing.com/data/stats/season_tt_results```
 
 ### stats.season_qualify_results()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -644,7 +644,7 @@ link: ```https://members-ng.iracing.com/data/stats/season_qualify_results```
 
 ### stats.world_records()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -661,7 +661,7 @@ link: ```https://members-ng.iracing.com/data/stats/world_records```
 
 ### team.get()
 
-```No Description```
+No Description
 
 | Parameter | Type | Description | Required |
 |:---------|:----:|:------------|:--------:|
@@ -697,7 +697,7 @@ link: ```https://members-ng.iracing.com/data/track/assets```
 
 ### track.get()
 
-```No Description```
+No Description
 
 
 link: ```https://members-ng.iracing.com/data/track/get```

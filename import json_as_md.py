@@ -16,7 +16,7 @@ def extract_and_write_endpoints(json_file_path, markdown_file_path):
                 if 'note' in details:
                     markdown_file.write(''.join(details['note']) + '\n\n')
                 else:
-                    markdown_file.write('```No Description```' + '\n\n')
+                    markdown_file.write('No Description' + '\n\n')
                 
                 # Check if parameters exist
                 if 'parameters' in details:
