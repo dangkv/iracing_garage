@@ -9,10 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Install Python 3.11
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+
       - name: black Lint
         uses: psf/black@stable
         with:
           use_pyproject: true
+
       - name: flake8 Lint
         uses: py-actions/flake8@v2
