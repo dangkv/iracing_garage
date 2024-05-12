@@ -4,17 +4,17 @@ import iracing_garage.endpoints as endpoints
 from iracing_garage.client import iRacingGarageClient
 
 
-class TimeAttackClient(iRacingGarageClient):
+class TeamClient(iRacingGarageClient):
     def __init__(self, transport, logger):
         super().__init__(transport, logger)
-        self.api_group = "time_attack"
+        self.api_group = "team"
 
-    def member_season_results(self, ta_comp_season_id: int) -> dict:
+    def get(self, team_id: int, include_licenses: bool = None) -> dict:
 
-        endpoint = endpoints.URL_TIME_ATTACK_MEMBER_SEASON_RESULTS
+        endpoint = endpoints.URL_TEAM_GET
         func_name = inspect.stack()[0][3]
 
-        params = {"ta_comp_season_id": ta_comp_season_id}
+        params = {"team_id": team_id, "include_licenses": include_licenses}
 
         return self._get(
             url=endpoint,

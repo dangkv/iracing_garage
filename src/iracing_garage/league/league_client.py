@@ -9,14 +9,14 @@ class LeagueClient(iRacingGarageClient):
         super().__init__(transport, logger)
         self.api_group = "league"
 
-    def cust_league_sessions(self, mine: bool, package_id: int) -> dict:
+    def cust_league_sessions(
+        self, mine: bool = None, package_id: int = None
+    ) -> dict:
+
         endpoint = endpoints.URL_LEAGUE_CUST_LEAGUE_SESSIONS
         func_name = inspect.stack()[0][3]
 
-        params = {
-            "mine": mine,
-            "package_id": package_id,
-        }
+        params = {"mine": mine, "package_id": package_id}
 
         return self._get(
             url=endpoint,
@@ -67,13 +67,11 @@ class LeagueClient(iRacingGarageClient):
         )
 
     def get(self, league_id: int, include_licenses: bool = None) -> dict:
+
         endpoint = endpoints.URL_LEAGUE_GET
         func_name = inspect.stack()[0][3]
 
-        params = {
-            "league_id": league_id,
-            "include_licenses": include_licenses,
-        }
+        params = {"league_id": league_id, "include_licenses": include_licenses}
 
         return self._get(
             url=endpoint,
@@ -85,13 +83,11 @@ class LeagueClient(iRacingGarageClient):
     def get_points_systems(
         self, league_id: int, season_id: int = None
     ) -> dict:
+
         endpoint = endpoints.URL_LEAGUE_GET_POINTS_SYSTEMS
         func_name = inspect.stack()[0][3]
 
-        params = {
-            "league_id": league_id,
-            "season_id": season_id,
-        }
+        params = {"league_id": league_id, "season_id": season_id}
 
         return self._get(
             url=endpoint,
@@ -101,15 +97,13 @@ class LeagueClient(iRacingGarageClient):
         )
 
     def membership(
-        self, customer_id: int, include_league: bool = None
+        self, cust_id: int = None, include_league: bool = None
     ) -> dict:
+
         endpoint = endpoints.URL_LEAGUE_MEMBERSHIP
         func_name = inspect.stack()[0][3]
 
-        params = {
-            "cust_id": customer_id,
-            "include_league": include_league,
-        }
+        params = {"cust_id": cust_id, "include_league": include_league}
 
         return self._get(
             url=endpoint,
@@ -119,13 +113,11 @@ class LeagueClient(iRacingGarageClient):
         )
 
     def roster(self, league_id: int, include_licenses: bool = None) -> dict:
+
         endpoint = endpoints.URL_LEAGUE_ROSTER
         func_name = inspect.stack()[0][3]
 
-        params = {
-            "league_id": league_id,
-            "include_licenses": include_licenses,
-        }
+        params = {"league_id": league_id, "include_licenses": include_licenses}
 
         return self._get(
             url=endpoint,
@@ -135,13 +127,11 @@ class LeagueClient(iRacingGarageClient):
         )
 
     def seasons(self, league_id: int, retired: bool = None) -> dict:
+
         endpoint = endpoints.URL_LEAGUE_SEASONS
         func_name = inspect.stack()[0][3]
 
-        params = {
-            "league_id": league_id,
-            "retired": retired,
-        }
+        params = {"league_id": league_id, "retired": retired}
 
         return self._get(
             url=endpoint,
@@ -176,10 +166,7 @@ class LeagueClient(iRacingGarageClient):
         )
 
     def season_sessions(
-        self,
-        league_id: int,
-        season_id: int,
-        results_only: bool = None,
+        self, league_id: int, season_id: int, results_only: bool = None
     ) -> dict:
 
         endpoint = endpoints.URL_LEAGUE_SEASON_SESSIONS

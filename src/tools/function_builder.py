@@ -110,6 +110,6 @@ class ApiParameters:
 
 
 if __name__ == "__main__":
-    api_group = "car"
+    api_group = "time_attack"
     json_path = "src/tools/api.json"
     main(json_path, api_group)

@@ -9,11 +9,12 @@ class StatsClient(iRacingGarageClient):
         super().__init__(transport, logger)
         self.api_group = "stats"
 
-    def member_bests(self, customer_id: int, car_id: int) -> dict:
+    def member_bests(self, cust_id: int = None, car_id: int = None) -> dict:
+
         endpoint = endpoints.URL_STATS_MEMBER_BESTS
         func_name = inspect.stack()[0][3]
 
-        params = {"customer_id": customer_id, "car_id": car_id}
+        params = {"cust_id": cust_id, "car_id": car_id}
 
         return self._get(
             url=endpoint,
@@ -22,11 +23,12 @@ class StatsClient(iRacingGarageClient):
             params=params,
         )
 
-    def member_career(self, customer_id: int) -> dict:
+    def member_career(self, cust_id: int = None) -> dict:
+
         endpoint = endpoints.URL_STATS_MEMBER_CAREER
         func_name = inspect.stack()[0][3]
 
-        params = {"cust_id": customer_id}
+        params = {"cust_id": cust_id}
 
         return self._get(
             url=endpoint,
@@ -36,6 +38,7 @@ class StatsClient(iRacingGarageClient):
         )
 
     def member_division(self, season_id: int, event_type: int) -> dict:
+
         endpoint = endpoints.URL_STATS_MEMBER_DIVISION
         func_name = inspect.stack()[0][3]
 
@@ -49,12 +52,13 @@ class StatsClient(iRacingGarageClient):
         )
 
     def member_recap(
-        self, customer_id: int = None, year: int = None, season: int = None
+        self, cust_id: int = None, year: int = None, season: int = None
     ) -> dict:
+
         endpoint = endpoints.URL_STATS_MEMBER_RECAP
         func_name = inspect.stack()[0][3]
 
-        params = {"cust_id": customer_id, "year": year, "season": season}
+        params = {"cust_id": cust_id, "year": year, "season": season}
 
         return self._get(
             url=endpoint,
@@ -63,11 +67,12 @@ class StatsClient(iRacingGarageClient):
             params=params,
         )
 
-    def member_recent_races(self, customer_id: int) -> dict:
+    def member_recent_races(self, cust_id: int = None) -> dict:
+
         endpoint = endpoints.URL_STATS_MEMBER_RECENT_RACES
         func_name = inspect.stack()[0][3]
 
-        params = {"cust_id": customer_id}
+        params = {"cust_id": cust_id}
 
         return self._get(
             url=endpoint,
@@ -76,11 +81,12 @@ class StatsClient(iRacingGarageClient):
             params=params,
         )
 
-    def member_summary(self, customer_id: int) -> dict:
+    def member_summary(self, cust_id: int = None) -> dict:
+
         endpoint = endpoints.URL_STATS_MEMBER_SUMMARY
         func_name = inspect.stack()[0][3]
 
-        params = {"cust_id": customer_id}
+        params = {"cust_id": cust_id}
 
         return self._get(
             url=endpoint,
@@ -89,11 +95,12 @@ class StatsClient(iRacingGarageClient):
             params=params,
         )
 
-    def member_yearly(self, customer_id: int) -> dict:
+    def member_yearly(self, cust_id: int = None) -> dict:
+
         endpoint = endpoints.URL_STATS_MEMBER_YEARLY
         func_name = inspect.stack()[0][3]
 
-        params = {"cust_id": customer_id}
+        params = {"cust_id": cust_id}
 
         return self._get(
             url=endpoint,
@@ -107,7 +114,7 @@ class StatsClient(iRacingGarageClient):
         season_id: int,
         car_class_id: int,
         club_id: int = None,
-        divion: int = None,
+        division: int = None,
         race_week_num: int = None,
     ) -> dict:
 
@@ -118,7 +125,7 @@ class StatsClient(iRacingGarageClient):
             "season_id": season_id,
             "car_class_id": car_class_id,
             "club_id": club_id,
-            "divion": divion,
+            "division": division,
             "race_week_num": race_week_num,
         }
 
@@ -134,7 +141,7 @@ class StatsClient(iRacingGarageClient):
         season_id: int,
         car_class_id: int,
         club_id: int = None,
-        divion: int = None,
+        division: int = None,
         race_week_num: int = None,
     ) -> dict:
 
@@ -145,7 +152,7 @@ class StatsClient(iRacingGarageClient):
             "season_id": season_id,
             "car_class_id": car_class_id,
             "club_id": club_id,
-            "divion": divion,
+            "division": division,
             "race_week_num": race_week_num,
         }
 
@@ -157,10 +164,7 @@ class StatsClient(iRacingGarageClient):
         )
 
     def season_team_standings(
-        self,
-        season_id: int,
-        car_class_id: int,
-        race_week_num: int = None,
+        self, season_id: int, car_class_id: int, race_week_num: int = None
     ) -> dict:
 
         endpoint = endpoints.URL_STATS_SEASON_TEAM_STANDINGS
@@ -184,7 +188,7 @@ class StatsClient(iRacingGarageClient):
         season_id: int,
         car_class_id: int,
         club_id: int = None,
-        divion: int = None,
+        division: int = None,
         race_week_num: int = None,
     ) -> dict:
 
@@ -195,7 +199,7 @@ class StatsClient(iRacingGarageClient):
             "season_id": season_id,
             "car_class_id": car_class_id,
             "club_id": club_id,
-            "divion": divion,
+            "division": division,
             "race_week_num": race_week_num,
         }
 
@@ -212,7 +216,7 @@ class StatsClient(iRacingGarageClient):
         car_class_id: int,
         race_week_num: int,
         club_id: int = None,
-        divion: int = None,
+        division: int = None,
     ) -> dict:
 
         endpoint = endpoints.URL_STATS_SEASON_TT_RESULTS
@@ -221,9 +225,9 @@ class StatsClient(iRacingGarageClient):
         params = {
             "season_id": season_id,
             "car_class_id": car_class_id,
-            "club_id": club_id,
-            "divion": divion,
             "race_week_num": race_week_num,
+            "club_id": club_id,
+            "division": division,
         }
 
         return self._get(
@@ -239,7 +243,7 @@ class StatsClient(iRacingGarageClient):
         car_class_id: int,
         race_week_num: int,
         club_id: int = None,
-        divion: int = None,
+        division: int = None,
     ) -> dict:
 
         endpoint = endpoints.URL_STATS_SEASON_QUALIFY_RESULTS
@@ -248,9 +252,9 @@ class StatsClient(iRacingGarageClient):
         params = {
             "season_id": season_id,
             "car_class_id": car_class_id,
-            "club_id": club_id,
-            "divion": divion,
             "race_week_num": race_week_num,
+            "club_id": club_id,
+            "division": division,
         }
 
         return self._get(
