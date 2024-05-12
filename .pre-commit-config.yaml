@@ -11,8 +11,25 @@ repos:
     rev: 22.10.0
     hooks:
     -   id: black
+        args: ['--config=pyproject.toml', '-v']
+        exclude: |
+            (?x)^(
+                .git/.* |
+                .github/.* |
+                docs/.* |
+                venv/.* |
+                src/tools/templates.*
+            )$s
 
 -   repo: https://github.com/pycqa/flake8
     rev: 3.9.2
     hooks:
       - id: flake8
+        exclude: |
+            (?x)^(
+                .git/.* |
+                .github/.* |
+                docs/.* |
+                venv/.* |
+                src/tools/templates.*
+            )$

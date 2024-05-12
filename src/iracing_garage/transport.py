@@ -2,8 +2,8 @@ import json
 import requests
 from requests_toolbelt.utils import dump
 
-import iracing_connect.endpoints as endpoints
-import iracing_connect.helpers as helpers
+import iracing_garage.endpoints as endpoints
+import iracing_garage.helpers as helpers
 
 
 class HTTPMethod:
@@ -14,7 +14,7 @@ class HTTPMethod:
     DELETE = "DELETE"
 
 
-class iRacingConnectTransport:
+class iRacingGarageTransport:
     def __init__(self, username, password, logger):
         self.username = username
         self.password = password
@@ -36,10 +36,9 @@ class iRacingConnectTransport:
         password = helpers.encode_pw(self.username, self.password)
         data = {"email": self.username, "password": password}
         headers = {"Content-Type": "application/json"}
-        json_data = json.dumps(data)
 
         login_response = requests.post(
-            endpoints.URL_LOGIN, data=json_data, headers=headers
+            endpoints.URL_LOGIN, data=json.dumps(data), headers=headers
         )
         return login_response.cookies
 

@@ -1,19 +1,20 @@
 import inspect
 
-import iracing_connect.endpoints as endpoints
-from iracing_connect.client import iRacingConnectClient
+import iracing_garage.endpoints as endpoints
+from iracing_garage.client import iRacingGarageClient
 
 
-class StatsClient(iRacingConnectClient):
+class SeriesClient(iRacingGarageClient):
     def __init__(self, transport, logger):
         super().__init__(transport, logger)
-        self.api_group = "stats"
+        self.api_group = "series"
 
-    def member_bests(self, customer_id: int, car_id: int) -> dict:
-        endpoint = endpoints.URL_STATS_MEMBER_BESTS
+    def assets(self) -> dict:
+
+        endpoint = endpoints.URL_SERIES_ASSETS
         func_name = inspect.stack()[0][3]
 
-        params = {"customer_id": customer_id, "car_id": car_id}
+        params = None
 
         return self._get(
             url=endpoint,
@@ -22,11 +23,12 @@ class StatsClient(iRacingConnectClient):
             params=params,
         )
 
-    def member_career(self, customer_id: int) -> dict:
-        endpoint = endpoints.URL_STATS_MEMBER_CAREER
+    def get(self) -> dict:
+
+        endpoint = endpoints.URL_SERIES_GET
         func_name = inspect.stack()[0][3]
 
-        params = {"customer_id": customer_id}
+        params = None
 
         return self._get(
             url=endpoint,
@@ -35,11 +37,12 @@ class StatsClient(iRacingConnectClient):
             params=params,
         )
 
-    def member_summary(self, customer_id: int) -> dict:
-        endpoint = endpoints.URL_STATS_MEMBER_SUMMARY
+    def past_seasons(self, series_id: int) -> dict:
+
+        endpoint = endpoints.URL_SERIES_PAST_SEASONS
         func_name = inspect.stack()[0][3]
 
-        params = {"customer_id": customer_id}
+        params = {"series_id": series_id}
 
         return self._get(
             url=endpoint,
@@ -48,11 +51,12 @@ class StatsClient(iRacingConnectClient):
             params=params,
         )
 
-    def member_yearly(self, customer_id: int) -> dict:
-        endpoint = endpoints.URL_STATS_MEMBER_YEARLY
+    def seasons(self, include_series: bool = None) -> dict:
+
+        endpoint = endpoints.URL_SERIES_SEASONS
         func_name = inspect.stack()[0][3]
 
-        params = {"customer_id": customer_id}
+        params = {"include_series": include_series}
 
         return self._get(
             url=endpoint,
@@ -61,11 +65,12 @@ class StatsClient(iRacingConnectClient):
             params=params,
         )
 
-    def member_recent_races(self, customer_id: int) -> dict:
-        endpoint = endpoints.URL_STATS_MEMBER_RECENT_RACES
+    def stats_series(self) -> dict:
+
+        endpoint = endpoints.URL_SERIES_STATS_SERIES
         func_name = inspect.stack()[0][3]
 
-        params = {"customer_id": customer_id}
+        params = None
 
         return self._get(
             url=endpoint,

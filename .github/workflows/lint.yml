@@ -1,0 +1,22 @@
+name: Lint Check
+
+on:
+  pull_request:
+    types: [synchronize]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: black Lint
+        uses: psf/black@stable
+        with:
+          src: "./src/iracing_garage"
+
+      - name: flake8 Lint
+        uses: py-actions/flake8@v2
+        with:
+          path: "./src/iracing_garage"
