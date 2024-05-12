@@ -33,11 +33,47 @@ class iRacingGarageClient:
                 f"Error retrieving {api_group} - {func_name}: {response.text}"
             )
 
-    def _get_chunks(self):
-        ...  # TODO
+    def _get_chunks(self, payload):
+        chunks = []
+        chunk_info = payload.get("chunk_info")
+        chunk_download_url = chunk_info.get("base_download_url")
+        chunk_file_names = [x for x in chunk_info.get("chunk_file_names")]
+
+        for i, chunk_file_name in enumerate(chunk_file_names):
+            full_url = chunk_download_url + chunk_file_name
+
+            try:
+                response = requests.get(
+                    full_url,
+                    cookies=self.cookies,
+                    allow_redirects=False,
+                    timeout=10.0,
+                ).text
+            except:  # noqa
+                # TODO: build exceptions
+                msg = f"API extraction error at {chunk_file_name}, {i}/{len(chunk_file_names)}"  # noqa
+                pass
+
+            chunks.append(response)
+
+        print()
+        return chunks
 
     def _get_constants(self):
-        ...  # TODO: constants does not have a gateway
+        pass  # TODO: constants does not have a gateway
+
+    def _wrap_payload(self, payload, method, endpoint, parameters):
+        ## {timestamp, payload, method, endpoint, parameters, username}
+        record = {
+            "timestamp": helpers.get_current_utc_time(),
+            "method": method,
+            "endpoint": endpoint,
+            "parameters": parameters,
+            "username": self.username,
+            "payload": payload,
+        }
+
+        return record
 
 
 class Client:
