@@ -2,11 +2,14 @@
 line-length = 79
 include = '\.pyi?$'
 exclude = '''
-/(
-    \.git
-  | \.github
-  | \docs
-  | \venv
-  | \src\tools\templates
-)/
+(
+  /(
+      \.git
+    | \.github
+    | \docs
+    | \venv
+    | \src\tools\templates
+  )/
+| migrations
+)
 '''
