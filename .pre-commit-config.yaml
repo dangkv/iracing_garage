@@ -11,13 +11,12 @@ repos:
     rev: 22.10.0
     hooks:
     -   id: black
-        args: ['src/iracing_garage', '--config=pyproject.toml', '-v']
+        args: ['--config=pyproject.toml', '-v']
 
 -   repo: https://github.com/pycqa/flake8
     rev: 3.9.2
     hooks:
       - id: flake8
-        args: ['src/iracing_garage']
         exclude: |
             (?x)^(
                 .git/.* |
