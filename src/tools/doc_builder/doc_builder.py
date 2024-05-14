@@ -49,9 +49,10 @@ def extract_and_write_endpoints(json_file_path, markdown_file_path):
             markdown_file.write("---\n\n")
 
 
-# File paths
-json_file_path = "/home/ham/Downloads/api.json"
-markdown_file_path = "methods.md"
+if __name__ == "__main__":
+    # File paths
+    json_file_path = "src/tools/api.json"
+    markdown_file_path = "src/tools/doc_builder/methods.md"
 
-# Call the function
-extract_and_write_endpoints(json_file_path, markdown_file_path)
+    # Call the function
+    extract_and_write_endpoints(json_file_path, markdown_file_path)
