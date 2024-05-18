@@ -2,20 +2,21 @@ import logging
 
 from iracing_garage.transport import iRacingGarageTransport
 
-from iracing_garage.car.car_client import CarClient
-from iracing_garage.carclass.carclass_client import CarClassClient
-from iracing_garage.constants.constants_client import ConstantsClient
-from iracing_garage.hosted.hosted_client import HostedClient
-from iracing_garage.league.league_client import LeagueClient
-from iracing_garage.lookup.lookup_client import LookupClient
-from iracing_garage.member.member_client import MemberClient
-from iracing_garage.results.results_client import ResultsClient
-from iracing_garage.season.season_client import SeasonClient
-from iracing_garage.series.series_client import SeriesClient
-from iracing_garage.stats.stats_client import StatsClient
-from iracing_garage.team.team_client import TeamClient
-from iracing_garage.time_attack.time_attack_client import TimeAttackClient
-from iracing_garage.track.track_client import TrackClient
+from iracing_garage.api_clients import ResultsClient
+from iracing_garage.api_clients import CarClient
+from iracing_garage.api_clients import CarClassClient
+from iracing_garage.api_clients import ConstantsClient
+from iracing_garage.api_clients import HostedClient
+from iracing_garage.api_clients import LeagueClient
+from iracing_garage.api_clients import LookupClient
+from iracing_garage.api_clients import MemberClient
+from iracing_garage.api_clients import SeasonClient
+from iracing_garage.api_clients import SeriesClient
+from iracing_garage.api_clients import StatsClient
+from iracing_garage.api_clients import TeamClient
+from iracing_garage.api_clients import TimeAttackClient
+from iracing_garage.api_clients import TrackClient
+
 
 logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s (Line :%(lineno)d [%(filename)s])",
