@@ -1,4 +1,3 @@
-import inspect
 import logging
 import json
 import requests
@@ -16,22 +15,23 @@ class iRacingGarageClient:
         self, url: str, api_group: str, func_name: str, params=None
     ) -> dict:
         response = self.transport.get(url=url, params=params)
+        response_json = response.json()
 
-        if response.status_code == requests.codes.OK:
-            gateway_response_dict = json.loads(response.text)
-            api_link = gateway_response_dict.get("link")
-
-            # TODO: raise if fails
-            response_data = self.transport.get(url=api_link)
-            return response_data.json()
-
-        else:
+        if response.status_code != requests.codes.OK:
             self.logger.debug(
                 f"Error retrieving {api_group} - {func_name}: {self.transport.dump_response(response)}"
             )
             raise Exception(
                 f"Error retrieving {api_group} - {func_name}: {response.text}"
             )
+        # TODO:
+        # payload can either be a dict or a list
+        # payload can be a dict without link
+        if not isinstance(object, list) and response_json.get("link"):
+            api_link = response_json.get("link")
+            return self.transport.get(url=api_link).json()
+
+        return response_json
 
     def _get_chunks(self, payload):
         chunks = []
@@ -39,25 +39,17 @@ class iRacingGarageClient:
         chunk_download_url = chunk_info.get("base_download_url")
         chunk_file_names = [x for x in chunk_info.get("chunk_file_names")]
 
-        for i, chunk_file_name in enumerate(chunk_file_names):
+        for chunk_file_name in chunk_file_names:
             full_url = chunk_download_url + chunk_file_name
-
-            try:
-                response = requests.get(
-                    full_url,
-                    cookies=self.cookies,
-                    allow_redirects=False,
-                    timeout=10.0,
-                ).text
-            except:  # noqa
-                # TODO: build exceptions
-                msg = f"API extraction error at {chunk_file_name}, {i}/{len(chunk_file_names)}"  # noqa
-                pass
-
+            response = self._get(
+                full_url,
+                api_group="chunks",
+                func_name="request",
+            )
             chunks.append(response)
 
-        print()
-        return chunks
+        payload["chunks"] = chunks
+        return payload
 
     def _get_constants(self):
         pass  # TODO: constants does not have a gateway

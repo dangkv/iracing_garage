@@ -57,7 +57,7 @@ if __name__ == "__main__":
 
     ## results
     # get_result = iRacing.results.get(subsession_id, 0)
-    # get_result = iRacing.results.lap_data(subsession_id, 0)
+    get_result = iRacing.results.lap_data(subsession_id, 0)
     # get_result = iRacing.results.event_log(subsession_id, 0)
     # get_result = iRacing.results.lap_chart_data(subsession_id, 0)
 

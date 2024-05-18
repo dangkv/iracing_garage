@@ -80,12 +80,17 @@ class ResultsClient(iRacingGarageClient):
             "team_id": team_id,
         }
 
-        return self._get(
+        response = self._get(
             url=endpoint,
             api_group=self.api_group,
             func_name=func_name,
             params=params,
         )
+
+        chunks = self._get_chunks(response)
+        response["chunks"] = chunks
+
+        return response
 
     def search_hosted(
         self,
