@@ -1,17 +1,17 @@
-<p align="center"><img width=12.5% src="media/logo.png"></p>
-<p align="center"><img width=60% src="media/iracing-garage.png"></p>
+<p align="center"><img width=15% src="media/logo.png"></p>
+<p align="center"><img width=10% src="media/iracing-garage.png"></p>
 
-Use a clear and concise title that reflects your project's purpose.
-Consider including keywords relevant to iRacing API development.
-Short Description (Paragraph):
+`iracing-garage` makes extracting iRacing data simple
 
-Provide a captivating introduction explaining what your wrapper does and its benefits.
-Briefly mention the target audience (iRacing developers) and the problem it solves (simplifying interaction with the iRacing API).
-Installation (H2):
+> [!NOTE]
+> This package is not officially launched on pypi yet
 
-Outline the steps for installing your wrapper.
-Include clear instructions using code blocks and package manager commands (e.g., npm install).
-Consider adding screenshots if the process involves UI elements.
+## Installation
+
+```bash
+pip install iracing-garage
+```
+
 Usage (H2):
 
 Provide concrete examples on how to utilize your wrapper with code snippets.
@@ -19,9 +19,13 @@ Explain the basic functionalities and demonstrate how to interact with the iRaci
 Consider including different usage scenarios to showcase flexibility.
 Contributing (H2) (Optional):
 
-If you'd like community contributions, include guidelines and expectations.
-Link to a separate CONTRIBUTING.md file for detailed instructions.
-License (H2):
+## Wiki
+
+Do you need some help? Check out the articles on the [wiki](wwww.google.com).
+
+## Contributing
+
+Got something interesting you'd like to share? Learn about [contributing](wwww.google.com).
 
 Specify the open-source license under which your project is distributed (e.g., MIT License).
 Include a link to the license file (LICENSE.md) for reference.
