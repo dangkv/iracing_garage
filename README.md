@@ -1,4 +1,4 @@
-<p align="center"><img width=30% src="media/iracing-garage-logo.png"></p>
+<p><img width=20% src="media/logo.png"></p>
 
 
 
