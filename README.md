@@ -5,7 +5,7 @@
 
 iracing-garage
 ============
-[[![GitHub Stars](https://img.shields.io/github/stars/IgorAntun/node-chat.svg)] ![License: MIT](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://www.tldrlegal.com/license/mit-license)
+[![License: MIT](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](https://www.tldrlegal.com/license/mit-license)
 
 `iracing-garage` simplifies extracting data from iRacing API. The package includes all iRacing API endpoints.
 
