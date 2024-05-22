@@ -24,11 +24,11 @@ Do you need some help? Check out the articles on the [wiki](wwww.google.com).
 
 ## Contributing
 
-Got something interesting you'd like to share? Learn about [contributing](wwww.google.com).
+Please take a look at our [contributing](wwww.google.com) guidelines if you're interested in helping!
 
 ---
 
 ## License
->You can check out the full license [here](LICENSE)
+You can check out the full license [here](LICENSE)
 
 This project is licensed under the terms of the **MIT** license.
