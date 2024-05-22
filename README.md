@@ -5,8 +5,6 @@
 
 iracing-garage
 ============
-
-&nbsp;&nbsp;
 [![GitHub Issues](https://img.shields.io/github/issues/dangkv/iracing_garage.svg)](https://github.com/dangkv/iracing_garage/issues)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://www.tldrlegal.com/license/mit-license)
