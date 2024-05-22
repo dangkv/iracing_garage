@@ -1,10 +1,11 @@
 <p><img width=20% src="media/logo.png"></p>
 
-
-
 > [!NOTE]
 > This package is not officially launched on pypi yet
-# Overview
+
+iracing-garage
+============
+
 `iracing-garage` simplifies extracting data from iRacing API. The package includes all iRacing API endpoints.
 
 ## Installation
