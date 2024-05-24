@@ -2,3 +2,6 @@ site_name: "iRacing Garage"
 
 docs:
   - methods.md
+
+theme:
+  name: readthedocs
