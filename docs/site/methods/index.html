@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Methods - iRacing Garage</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">iRacing Garage</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h3 id="carassets">car.assets()</h3>
+<p>image paths are relative to https://images-static.iracing.com/</p>
+<p>link: <code>https://members-ng.iracing.com/data/car/assets</code></p>
+<hr />
+<h3 id="carget">car.get()</h3>
+<p>link: <code>https://members-ng.iracing.com/data/car/get</code></p>
+<hr />
+<h3 id="carclassget">carclass.get()</h3>
+<p>link: <code>https://members-ng.iracing.com/data/carclass/get</code></p>
+<hr />
+<h3 id="constantscategories">constants.categories()</h3>
+<p>Constant; returned directly as an array of objects</p>
+<p>link: <code>https://members-ng.iracing.com/data/constants/categories</code></p>
+<hr />
+<h3 id="constantsdivisions">constants.divisions()</h3>
+<p>Constant; returned directly as an array of objects</p>
+<p>link: <code>https://members-ng.iracing.com/data/constants/divisions</code></p>
+<hr />
+<h3 id="constantsevent_types">constants.event_types()</h3>
+<p>Constant; returned directly as an array of objects</p>
+<p>link: <code>https://members-ng.iracing.com/data/constants/event_types</code></p>
+<hr />
+<h3 id="hostedcombined_sessions">hosted.combined_sessions()</h3>
+<p>Sessions that can be joined as a driver or spectator, and also includes non-league pending sessions for the user.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>package_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">If set, return only sessions using this car or track package ID.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/hosted/combined_sessions</code></p>
+<hr />
+<h3 id="hostedsessions">hosted.sessions()</h3>
+<p>Sessions that can be joined as a driver. Without spectator and non-league pending sessions for the user.</p>
+<p>link: <code>https://members-ng.iracing.com/data/hosted/sessions</code></p>
+<hr />
+<h3 id="leaguecust_league_sessions">league.cust_league_sessions()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>mine</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">If true, return only sessions created by this user.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>package_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">If set, return only sessions using this car or track package ID.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/league/cust_league_sessions</code></p>
+<hr />
+<h3 id="leaguedirectory">league.directory()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>search</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">Will search against league name, description, owner, and league ID.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tag</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">One or more tags, comma-separated.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>restrict_to_member</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">If true include only leagues for which customer is a member.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>restrict_to_recruiting</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">If true include only leagues which are recruiting.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>restrict_to_friends</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">If true include only leagues owned by a friend.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>restrict_to_watched</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">If true include only leagues owned by a watched member.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>minimum_roster_count</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">If set include leagues with at least this number of members.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>maximum_roster_count</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">If set include leagues with no more than this number of members.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>lowerbound</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">First row of results to return.  Defaults to 1.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>upperbound</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Last row of results to return. Defaults to lowerbound + 39.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>sort</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">One of relevance, leaguename, displayname, rostercount. displayname is owners's name. Defaults to relevance.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>order</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">One of asc or desc.  Defaults to asc.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/league/directory</code></p>
+<hr />
+<h3 id="leagueget">league.get()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>league_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>include_licenses</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">For faster responses, only request when necessary.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/league/get</code></p>
+<hr />
+<h3 id="leagueget_points_systems">league.get_points_systems()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>league_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">If included and the season is using custom points (points_system_id:2) then the custom points option is included in the returned list. Otherwise the custom points option is not returned.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/league/get_points_systems</code></p>
+<hr />
+<h3 id="leaguemembership">league.membership()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">If different from the authenticated member, the following resrictions apply: - Caller cannot be on requested customer's block list or an empty list will result; - Requested customer cannot have their online activity prefrence set to hidden or an empty list will result; - Only leagues for which the requested customer is an admin and the league roster is not private are returned.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>include_league</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/league/membership</code></p>
+<hr />
+<h3 id="leagueroster">league.roster()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>league_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>include_licenses</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">For faster responses, only request when necessary.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/league/roster</code></p>
+<hr />
+<h3 id="leagueseasons">league.seasons()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>league_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>retired</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">If true include seasons which are no longer active.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/league/seasons</code></p>
+<hr />
+<h3 id="leagueseason_standings">league.season_standings()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>league_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>car_class_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>car_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">If car_class_id is included then the standings are for the car in that car class, otherwise they are for the car across car classes.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/league/season_standings</code></p>
+<hr />
+<h3 id="leagueseason_sessions">league.season_sessions()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>league_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>results_only</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">If true include only sessions for which results are available.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/league/season_sessions</code></p>
+<hr />
+<h3 id="lookupclub_history">lookup.club_history()</h3>
+<p>Returns an earlier history if requested quarter does not have a club history.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>season_year</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>season_quarter</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/lookup/club_history</code></p>
+<hr />
+<h3 id="lookupcountries">lookup.countries()</h3>
+<p>link: <code>https://members-ng.iracing.com/data/lookup/countries</code></p>
+<hr />
+<h3 id="lookupdrivers">lookup.drivers()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>search_term</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">A cust_id or partial name for which to search.</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>league_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Narrow the search to the roster of the given league.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/lookup/drivers</code></p>
+<hr />
+<h3 id="lookupget">lookup.get()</h3>
+<p>?weather=weather_wind_speed_units&amp;weather=weather_wind_speed_max&amp;weather=weather_wind_speed_min&amp;licenselevels=licenselevels</p>
+<p>link: <code>https://members-ng.iracing.com/data/lookup/get</code></p>
+<hr />
+<h3 id="lookuplicenses">lookup.licenses()</h3>
+<p>link: <code>https://members-ng.iracing.com/data/lookup/licenses</code></p>
+<hr />
+<h3 id="memberawards">member.awards()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to the authenticated member.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/member/awards</code></p>
+<hr />
+<h3 id="memberchart_data">member.chart_data()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to the authenticated member.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>category_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">1 - Oval; 2 - Road; 3 - Dirt oval; 4 - Dirt road</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>chart_type</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">1 - iRating; 2 - TT Rating; 3 - License/SR</td>
+<td style="text-align: center;">True</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/member/chart_data</code></p>
+<hr />
+<h3 id="memberget">member.get()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cust_ids</code></td>
+<td style="text-align: center;"><code>numbers</code></td>
+<td style="text-align: left;">?cust_ids=2,3,4</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>include_licenses</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/member/get</code></p>
+<hr />
+<h3 id="memberinfo">member.info()</h3>
+<p>Always the authenticated member.</p>
+<p>link: <code>https://members-ng.iracing.com/data/member/info</code></p>
+<hr />
+<h3 id="memberparticipation_credits">member.participation_credits()</h3>
+<p>Always the authenticated member.</p>
+<p>link: <code>https://members-ng.iracing.com/data/member/participation_credits</code></p>
+<hr />
+<h3 id="memberprofile">member.profile()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to the authenticated member.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/member/profile</code></p>
+<hr />
+<h3 id="resultsget">results.get()</h3>
+<p>Get the results of a subsession, if authorized to view them. series_logo image paths are relative to https://images-static.iracing.com/img/logos/series/</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>subsession_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>include_licenses</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/results/get</code></p>
+<hr />
+<h3 id="resultsevent_log">results.event_log()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>subsession_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>simsession_number</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The main event is 0; the preceding event is -1, and so on.</td>
+<td style="text-align: center;">True</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/results/event_log</code></p>
+<hr />
+<h3 id="resultslap_chart_data">results.lap_chart_data()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>subsession_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>simsession_number</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The main event is 0; the preceding event is -1, and so on.</td>
+<td style="text-align: center;">True</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/results/lap_chart_data</code></p>
+<hr />
+<h3 id="resultslap_data">results.lap_data()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>subsession_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>simsession_number</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The main event is 0; the preceding event is -1, and so on.</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Required if the subsession was a single-driver event. Optional for team events. If omitted for a team event then the laps driven by all the team's drivers will be included.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>team_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Required if the subsession was a team event.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/results/lap_data</code></p>
+<hr />
+<h3 id="resultssearch_hosted">results.search_hosted()</h3>
+<p>Hosted and league sessions.  Maximum time frame of 90 days. Results split into one or more files with chunks of results. For scraping results the most effective approach is to keep track of the maximum end_time found during a search then make the subsequent call using that date/time as the finish_range_begin and skip any subsessions that are duplicated.  Results are ordered by subsessionid which is a proxy for start time. Requires one of: start_range_begin, finish_range_begin. Requires one of: cust_id, team_id, host_cust_id, session_name.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>start_range_begin</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">Session start times. ISO-8601 UTC time zero offset: "2022-04-01T15:45Z".</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>start_range_end</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">ISO-8601 UTC time zero offset: "2022-04-01T15:45Z". Exclusive. May be omitted if start_range_begin is less than 90 days in the past.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>finish_range_begin</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">Session finish times. ISO-8601 UTC time zero offset: "2022-04-01T15:45Z".</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>finish_range_end</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">ISO-8601 UTC time zero offset: "2022-04-01T15:45Z". Exclusive. May be omitted if finish_range_begin is less than 90 days in the past.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The participant's customer ID. Ignored if team_id is supplied.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>team_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The team ID to search for. Takes priority over cust_id if both are supplied.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>host_cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The host's customer ID.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>session_name</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">Part or all of the session's name.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>league_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Include only results for the league with this ID.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>league_season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Include only results for the league season with this ID.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>car_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">One of the cars used by the session.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>track_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The ID of the track used by the session.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>category_ids</code></td>
+<td style="text-align: center;"><code>numbers</code></td>
+<td style="text-align: left;">Track categories to include in the search.  Defaults to all. ?category_ids=1,2,3,4</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/results/search_hosted</code></p>
+<hr />
+<h3 id="resultssearch_series">results.search_series()</h3>
+<p>Official series.  Maximum time frame of 90 days. Results split into one or more files with chunks of results. For scraping results the most effective approach is to keep track of the maximum end_time found during a search then make the subsequent call using that date/time as the finish_range_begin and skip any subsessions that are duplicated.  Results are ordered by subsessionid which is a proxy for start time but groups together multiple splits of a series when multiple series launch sessions at the same time. Requires at least one of: season_year and season_quarter, start_range_begin, finish_range_begin.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>season_year</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Required when using season_quarter.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>season_quarter</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Required when using season_year.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>start_range_begin</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">Session start times. ISO-8601 UTC time zero offset: "2022-04-01T15:45Z".</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>start_range_end</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">ISO-8601 UTC time zero offset: "2022-04-01T15:45Z". Exclusive. May be omitted if start_range_begin is less than 90 days in the past.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>finish_range_begin</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">Session finish times. ISO-8601 UTC time zero offset: "2022-04-01T15:45Z".</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>finish_range_end</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">ISO-8601 UTC time zero offset: "2022-04-01T15:45Z". Exclusive. May be omitted if finish_range_begin is less than 90 days in the past.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Include only sessions in which this customer participated. Ignored if team_id is supplied.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>team_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Include only sessions in which this team participated. Takes priority over cust_id if both are supplied.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>series_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Include only sessions for series with this ID.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>race_week_num</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Include only sessions with this race week number.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>official_only</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">If true, include only sessions earning championship points. Defaults to all.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>event_types</code></td>
+<td style="text-align: center;"><code>numbers</code></td>
+<td style="text-align: left;">Types of events to include in the search. Defaults to all. ?event_types=2,3,4,5</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>category_ids</code></td>
+<td style="text-align: center;"><code>numbers</code></td>
+<td style="text-align: left;">License categories to include in the search.  Defaults to all. ?category_ids=1,2,3,4</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/results/search_series</code></p>
+<hr />
+<h3 id="resultsseason_results">results.season_results()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>event_type</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Retrict to one event type: 2 - Practice; 3 - Qualify; 4 - Time Trial; 5 - Race</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>race_week_num</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The first race week of a season is 0.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/results/season_results</code></p>
+<hr />
+<h3 id="seasonlist">season.list()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>season_year</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>season_quarter</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/season/list</code></p>
+<hr />
+<h3 id="seasonrace_guide">season.race_guide()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>from</code></td>
+<td style="text-align: center;"><code>string</code></td>
+<td style="text-align: left;">ISO-8601 offset format. Defaults to the current time. Include sessions with start times up to 3 hours after this time. Times in the past will be rewritten to the current time.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>include_end_after_from</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">Include sessions which start before 'from' but end after.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/season/race_guide</code></p>
+<hr />
+<h3 id="seasonspectator_subsessionids">season.spectator_subsessionids()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>event_types</code></td>
+<td style="text-align: center;"><code>numbers</code></td>
+<td style="text-align: left;">Types of events to include in the search. Defaults to all. ?event_types=2,3,4,5</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/season/spectator_subsessionids</code></p>
+<hr />
+<h3 id="seriesassets">series.assets()</h3>
+<p>image paths are relative to https://images-static.iracing.com/</p>
+<p>link: <code>https://members-ng.iracing.com/data/series/assets</code></p>
+<hr />
+<h3 id="seriesget">series.get()</h3>
+<p>link: <code>https://members-ng.iracing.com/data/series/get</code></p>
+<hr />
+<h3 id="seriespast_seasons">series.past_seasons()</h3>
+<p>Get all seasons for a series. Filter list by official:true for seasons with standings.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>series_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/series/past_seasons</code></p>
+<hr />
+<h3 id="seriesseasons">series.seasons()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>include_series</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/series/seasons</code></p>
+<hr />
+<h3 id="seriesstats_series">series.stats_series()</h3>
+<p>To get series and seasons for which standings should be available, filter the list by official: true.</p>
+<p>link: <code>https://members-ng.iracing.com/data/series/stats_series</code></p>
+<hr />
+<h3 id="statsmember_bests">stats.member_bests()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to the authenticated member.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>car_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">First call should exclude car_id; use cars_driven list in return for subsequent calls.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/member_bests</code></p>
+<hr />
+<h3 id="statsmember_career">stats.member_career()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to the authenticated member.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/member_career</code></p>
+<hr />
+<h3 id="statsmember_division">stats.member_division()</h3>
+<p>Divisions are 0-based: 0 is Division 1, 10 is Rookie. See /data/constants/divisons for more information. Always for the authenticated member.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>event_type</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The event type code for the division type: 4 - Time Trial; 5 - Race</td>
+<td style="text-align: center;">True</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/member_division</code></p>
+<hr />
+<h3 id="statsmember_recap">stats.member_recap()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to the authenticated member.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>year</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Season year; if not supplied the current calendar year (UTC) is used.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>season</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Season (quarter) within the year; if not supplied the recap will be fore the entire year.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/member_recap</code></p>
+<hr />
+<h3 id="statsmember_recent_races">stats.member_recent_races()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to the authenticated member.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/member_recent_races</code></p>
+<hr />
+<h3 id="statsmember_summary">stats.member_summary()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to the authenticated member.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/member_summary</code></p>
+<hr />
+<h3 id="statsmember_yearly">stats.member_yearly()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>cust_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to the authenticated member.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/member_yearly</code></p>
+<hr />
+<h3 id="statsseason_driver_standings">stats.season_driver_standings()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>car_class_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>club_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to all (-1).</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>division</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Divisions are 0-based: 0 is Division 1, 10 is Rookie. See /data/constants/divisons for more information. Defaults to all.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>race_week_num</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The first race week of a season is 0.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/season_driver_standings</code></p>
+<hr />
+<h3 id="statsseason_supersession_standings">stats.season_supersession_standings()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>car_class_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>club_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to all (-1).</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>division</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Divisions are 0-based: 0 is Division 1, 10 is Rookie. See /data/constants/divisons for more information. Defaults to all.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>race_week_num</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The first race week of a season is 0.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/season_supersession_standings</code></p>
+<hr />
+<h3 id="statsseason_team_standings">stats.season_team_standings()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>car_class_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>race_week_num</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The first race week of a season is 0.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/season_team_standings</code></p>
+<hr />
+<h3 id="statsseason_tt_standings">stats.season_tt_standings()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>car_class_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>club_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to all (-1).</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>division</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Divisions are 0-based: 0 is Division 1, 10 is Rookie. See /data/constants/divisons for more information. Defaults to all.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>race_week_num</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The first race week of a season is 0.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/season_tt_standings</code></p>
+<hr />
+<h3 id="statsseason_tt_results">stats.season_tt_results()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>car_class_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>race_week_num</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The first race week of a season is 0.</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>club_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to all (-1).</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>division</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Divisions are 0-based: 0 is Division 1, 10 is Rookie. See /data/constants/divisons for more information. Defaults to all.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/season_tt_results</code></p>
+<hr />
+<h3 id="statsseason_qualify_results">stats.season_qualify_results()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>car_class_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>race_week_num</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">The first race week of a season is 0.</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>club_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Defaults to all (-1).</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>division</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Divisions are 0-based: 0 is Division 1, 10 is Rookie. See /data/constants/divisons for more information. Defaults to all.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/season_qualify_results</code></p>
+<hr />
+<h3 id="statsworld_records">stats.world_records()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>car_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>track_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>season_year</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Limit best times to a given year.</td>
+<td style="text-align: center;">False</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>season_quarter</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">Limit best times to a given quarter; only applicable when year is used.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/stats/world_records</code></p>
+<hr />
+<h3 id="teamget">team.get()</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>team_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>include_licenses</code></td>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: left;">For faster responses, only request when necessary.</td>
+<td style="text-align: center;">False</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/team/get</code></p>
+<hr />
+<h3 id="time_attackmember_season_results">time_attack.member_season_results()</h3>
+<p>Results for the authenticated member, if any.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Type</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ta_comp_season_id</code></td>
+<td style="text-align: center;"><code>number</code></td>
+<td style="text-align: left;">No description available</td>
+<td style="text-align: center;">True</td>
+</tr>
+</tbody>
+</table>
+<p>link: <code>https://members-ng.iracing.com/data/time_attack/member_season_results</code></p>
+<hr />
+<h3 id="trackassets">track.assets()</h3>
+<p>image paths are relative to https://images-static.iracing.com/</p>
+<p>link: <code>https://members-ng.iracing.com/data/track/assets</code></p>
+<hr />
+<h3 id="trackget">track.get()</h3>
+<p>link: <code>https://members-ng.iracing.com/data/track/get</code></p>
+<hr /></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
