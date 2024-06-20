@@ -7,6 +7,7 @@ distlib==0.3.8
 filelock==3.14.0
 identify==2.5.36
 idna==3.7
+mkdocs-material==9.5.27
 mypy-extensions==1.0.0
 nodeenv==1.8.0
 packaging==24.0

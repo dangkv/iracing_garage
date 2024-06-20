@@ -50,7 +50,7 @@ def extract_and_write_endpoints(json_file_path, markdown_file_path):
 
 
 # File paths
-json_file_path = "/home/ham/Downloads/api.json"
+json_file_path = "src/tools/api.json"
 markdown_file_path = "methods.md"
 
 # Call the function
