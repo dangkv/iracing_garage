@@ -1,4 +1,4 @@
-name: cd-mkdocs
+name: Deploying Documentation
 on:
   push:
     branches:
