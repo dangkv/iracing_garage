@@ -1,4 +1,4 @@
-<p><img width=20% src="media/logo.png"></p>
+<p><img width=20% src="media/logo-title-1.png"></p>
 
 > [!NOTE]
 > This package is not officially launched on pypi yet
@@ -16,9 +16,9 @@ pip install iracing-garage
 
 ---
 
-## Wiki
+## Documentation
 
-Do you need some help? Check out the articles on the [wiki](wwww.google.com).
+The official documentation can be found [here](https://dangkv.github.io/iracing_garage/).
 
 ---
 
