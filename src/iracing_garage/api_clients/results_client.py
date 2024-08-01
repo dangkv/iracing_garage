@@ -88,7 +88,7 @@ class ResultsClient(iRacingGarageClient):
         )
 
         chunks = self._get_chunks(response)
-        response["chunks"] = chunks
+        response["chunk_payload"] = chunks
 
         return response
 

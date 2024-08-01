@@ -27,11 +27,10 @@ class iRacingGarageClient:
         # TODO:
         # payload can either be a dict or a list
         # payload can be a dict without link
-        if not isinstance(object, list) and response_json.get("link"):
-            api_link = response_json.get("link")
-            return self.transport.get(url=api_link).json()
 
-        return response_json
+        api_link = response_json.get("link")
+        api_data_json = self.transport.get(url=api_link).json()
+        return api_data_json
 
     def _get_chunks(self, payload):
         chunks = []
@@ -41,18 +40,30 @@ class iRacingGarageClient:
 
         for chunk_file_name in chunk_file_names:
             full_url = chunk_download_url + chunk_file_name
-            response = self._get(
-                full_url,
-                api_group="chunks",
-                func_name="request",
+            response = self.transport.get(full_url).json()
+            chunks.extend(response)
+
+        return chunks
+
+    def _get_entry(
+        self, url: str, api_group: str, func_name: str, params=None
+    ) -> dict:
+        response = self.transport.get(url=url, params=params)
+
+        if response.status_code != requests.codes.OK:
+            self.logger.debug(
+                f"Error retrieving {api_group} - {func_name}: {self.transport.dump_response(response)}"
             )
-            chunks.append(response)
+            raise Exception(
+                f"Error retrieving {api_group} - {func_name}: {response.text}"
+            )
 
-        payload["chunks"] = chunks
-        return payload
+        gateway_response_dict = json.loads(response.text)
+        api_link = gateway_response_dict.get("link")
 
-    def _get_constants(self):
-        pass  # TODO: constants does not have a gateway
+        # TODO: raise if fails
+        response_data = self.transport.get(url=api_link)
+        return response_data.json()
 
     def _wrap_payload(self, payload, method, endpoint, parameters):
         ## {timestamp, payload, method, endpoint, parameters, username}
