@@ -1,4 +1,5 @@
 import os
+import json
 from iracing_garage import iRacingGarage
 from dotenv import load_dotenv
 
@@ -57,7 +58,7 @@ if __name__ == "__main__":
 
     ## results
     # get_result = iRacing.results.get(subsession_id, 0)
-    # get_result = iRacing.results.lap_data(subsession_id, 0)
+    get_result = iRacing.results.lap_data(subsession_id, 0)
     # get_result = iRacing.results.event_log(subsession_id, 0)
     # get_result = iRacing.results.lap_chart_data(subsession_id, 0)
 
@@ -80,4 +81,5 @@ if __name__ == "__main__":
     # get_result = iRacing.track.get()
     # get_result = iRacing.track.assets()
 
-    print(get_result)
+    json_response = json.dumps(get_result)
+    print(json_response)
