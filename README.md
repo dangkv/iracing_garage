@@ -1,4 +1,4 @@
-<p><img width=20% src="media/logo.png"></p>
+<p><img width=20% src="media/logo-title-1.png"></p>
 
 > [!NOTE]
 > This package is not officially launched on pypi yet
