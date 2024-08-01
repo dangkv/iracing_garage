@@ -39,7 +39,11 @@ def load_methods(doc: dict, api_group: str) -> dict:
 
 
 def print_functions(method_list: list, template):
-    with open("jinja_test.py", mode="w", encoding="utf-8") as output:
+    with open(
+        "src/tools/function_builder/python_endpoints.py",
+        mode="w",
+        encoding="utf-8",
+    ) as output:
         for method in method_list:
             params = method.parameters
 
@@ -52,7 +56,9 @@ def print_functions(method_list: list, template):
 
 
 def main(json_path: str, api_group: str) -> None:
-    env = Environment(loader=FileSystemLoader("src/tools/templates/"))
+    env = Environment(
+        loader=FileSystemLoader("src/tools/function_builder/templates/")
+    )
     function_template = env.get_template("function_template.py")
     doc = read_json(json_path)
     method_list = load_methods(doc=doc, api_group=api_group)
@@ -110,6 +116,6 @@ class ApiParameters:
 
 
 if __name__ == "__main__":
-    api_group = "time_attack"
+    api_group = "member"
     json_path = "src/tools/api.json"
     main(json_path, api_group)

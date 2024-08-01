@@ -8,7 +8,7 @@ exclude = '''
     | \.github
     | \docs
     | \venv
-    | \src\tools\templates
+    | \src\tools
   )/
 | migrations
 )

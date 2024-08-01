@@ -43,12 +43,9 @@ class iRacingGarageTransport:
         return login_response.cookies
 
     def get(self, url: str, params: dict = None):
+        self.logger.info(f"Request sent to: {url}")
         response = self.request(url, HTTPMethod.GET, params)
-        self.logger.info(f"Request sent for URL: {response.url}")
-        self.logger.info(
-            f"Status code of the response: {response.status_code}"
-        )
-        self.logger.debug(f"Response object: {response.__dict__}")
+        self.logger.info(f"Payload received from: {response.url}")
 
         return response
 
