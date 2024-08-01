@@ -1,26 +1,37 @@
 site_name: iRacing Garage
+site_url: https://dangkv.github.io/iracing_garage/
 
 theme:
   name: material
+  language: en
+  logo: ./media/logo-title-2.png
   features:
     - navigation.tabs
     - navigation.sections
-    - toc.integrate
+    - navigation.indexes
     - navigation.top
+    - navigation.tracking
+    - toc.integrate
     - search.suggest
+    - search.share
     - search.highlight
     - content.tabs.link
     - content.code.copy
-  language: en
+    - content.code.annotate
+
   palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/weather-sunny
         name: Switch to dark mode
     - scheme: slate
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-night
         name: Switch to light mode
+# plugins:
+#     - typeset
+#     - search
+
 extra:
   social:
     - icon: fontawesome/brands/github-alt
@@ -29,6 +40,7 @@ extra:
       link: https://www.linkedin.com/in/dangkhoivo/
 
 markdown_extensions:
+  - md_in_html
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -41,6 +53,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
+  - toc:
+      permalink: true
 
 copyright: |
   &copy; 2024 <a href="https://github.com/dangkv"  target="_blank" rel="noopener">Dang Khoi Vo</a>
