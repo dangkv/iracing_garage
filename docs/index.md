@@ -12,20 +12,11 @@ This is a simple and free Python wrapper around the [iRacing API](https://forums
 
 ### 1. Install the package 📦
 
-Clone the repo:
-
 ```bash
-git clone https://github.com/dangkv/iracing_garage.git
-cd iracing_garage
+pip install iracing-garage
 ```
 
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-(Optional: consider creating a virtual environment)
+(Optional: consider installing in a virtual environment)
 
 ---
 
