@@ -10,12 +10,15 @@
  ---
 
 #### How to Install
-```
-pip install iracing_garage
+
+```bash
+pip install iracing-garage
 ```
 
+(Optional: consider installing in a virtual environment)
+
 #### How to Authenticate
-```
+```python
 from iracing_garage import iRacingGarage
 
 
