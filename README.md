@@ -20,7 +20,7 @@ analyzing your races, or just love data — this is your pit crew in code form. 
 
 The official documentation can be found [here](https://dangkv.github.io/iracing_garage/).
 
-### 1. Install the package
+### 1. Install the package 📦
 
 Clone the repo:
 
@@ -92,7 +92,8 @@ simsession_number = 0
 results = iracing.results.get(subsession_id, simsession_number)
 print(results)
 ```
-#### Check out the [Data Endpoints](https://dangkv.github.io/iracing_garage/data-endpoints/) page for more data points!!
+
+### Check out the [Data Endpoints](https://dangkv.github.io/iracing_garage/data-endpoints/) page for more data points!!
 
 ---
 
@@ -105,17 +106,6 @@ print(results)
 ## 🏁 Final Lap
 
 Enjoy the ride. 🏎️💨
-
-[Getting Started](https://dangkv.github.io/iracing_garage/getting-started/){ .md-button }
-
-<div class="grid cards" markdown>
-
-- :fontawesome-brands-html5: __HTML__ for content and structure
-- :fontawesome-brands-js: __JavaScript__ for interactivity
-- :fontawesome-brands-css3: __CSS__ for text running out of boxes
-- :fontawesome-brands-internet-explorer: __Internet Explorer__ ... huh?
-
-</div>
 
 
 ## License
