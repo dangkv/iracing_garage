@@ -1,13 +1,5 @@
 <p><img width=100% src="media/logo-title-1.png"></p>
 
-> [!NOTE]
-> This package is not officially launched on pypi yet
-
-iracing-garage
-============
-
-# Home
-
 ##  Welcome to **iracing\_garage**! 🏎️
 
 This is a simple and free Python wrapper around the [iRacing API](https://forums.iracing.com/discussion/15068/general-availability-of-data-api/p1), 

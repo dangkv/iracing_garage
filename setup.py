@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = "\n" + f.read()
 
-VERSION = "0.0.3"
+VERSION = "0.0.5"
 DESCRIPTION = "Simple iRacing API Wrapper"
 LONG_DESCRIPTION = "A Python app to get data from the iRacing API endpoints. Helps you get stats, race results, and more! 🏎️ 🏁"
 
@@ -21,6 +21,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=long_description,
     packages=find_packages(),
+    url="https://github.com/dangkv/iracing_garage",
     install_requires=["requests", "requests_toolbelt"],
     keywords=[
         "python",
@@ -31,8 +32,6 @@ setup(
         "iracing-api",
     ],
     classifiers=[
-        "Development Status :: 1 - Initial Launch",
-        "Intended Audience :: Community",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",

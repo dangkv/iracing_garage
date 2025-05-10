@@ -4,11 +4,13 @@
 
 This is a simple and free Python wrapper around the [iRacing API](https://forums.iracing.com/discussion/15068/general-availability-of-data-api/p1), created for the awesome iRacing community. Whether you're building a tool, analyzing your races, or just love data — this is your pit crew in code form. 😎
 
+[Github Repository](https://github.com/dangkv/iracing_garage){ .md-button }
+
 ---
 
 ## 🚀 Getting Started
 
-### 1. Install the package
+### 1. Install the package 📦
 
 Clone the repo:
 
