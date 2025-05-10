@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = "\n" + f.read()
 
-VERSION = "0.0.5"
+VERSION = "0.0.6"
 DESCRIPTION = "Simple iRacing API Wrapper"
 LONG_DESCRIPTION = "A Python app to get data from the iRacing API endpoints. Helps you get stats, race results, and more! 🏎️ 🏁"
 
